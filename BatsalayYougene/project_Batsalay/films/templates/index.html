@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+{% extends 'base.html' %}
+
+{% block content %}
+  <h1>Фильмы</h1>
+
+  <ul>
+    {% for film in films %}
+      <li>
+        <h2>{{ film.title }}</h2>
+        <p>Категория: {{ film.category }}</p>
+        <p>Дата выпуска: {{ film.release_date }}</p>
+        <p>Актеры: {{ film.actors }}</p>
+        <p>Дата показа: {{ film.show_date }}</p>
+      </li>
+    {% endfor %}
+  </ul>
+{% endblock %}
+</body>
+</html>
